@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SacramentAgenda.Models.UnitViewModels.AssignmentDateGroup>
+
+@{
+    ViewData["Title"] = "About Sacrament Meeting Agendas";
+}
+
+    <h2>About Sacrament Meeting Agendas</h2>
+
+<table>
+    <tr>
+        <th>
+            Agenda Date
+        </th>
+        <th>
+            Agendas
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignmentDate)
+            </td>
+            <td>
+                @item.AgendaCount
+            </td>
+        </tr>
+    }
+</table>
+
